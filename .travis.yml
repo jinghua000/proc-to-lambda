@@ -1,0 +1,9 @@
+language: ruby
+env:
+  - IS_CI=1
+rvm:
+  - 2.1
+  - 2.5
+  - 2.6
+script:
+  - bundle exec rspec
