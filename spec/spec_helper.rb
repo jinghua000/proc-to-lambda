@@ -13,6 +13,11 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+require 'simplecov'
+SimpleCov.start
+SimpleCov.minimum_coverage 100
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -97,4 +102,11 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+end
+
+if ENV['IS_CI'].to_i == 1
+
+  require 'coveralls'
+  Coveralls.wear!
+
 end
