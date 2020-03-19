@@ -92,4 +92,18 @@ RSpec.describe ProcToLambda do
 
   end
 
+  it 'module can be extended' do
+
+    TryIt.extend(ProcToLambda)
+
+    expect(TryIt.to_lambda(proc {}).lambda?).to eq(true)
+
+  end
+
+  it 'version should correct' do
+
+    expect(ProcToLambda::VERSION).to eq('0.1.0')
+
+  end
+
 end
