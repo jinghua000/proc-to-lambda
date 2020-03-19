@@ -45,4 +45,4 @@ Proc.to_lambda(proc {})
 
 ## More 
 
-You can see also test cases.
+You can see also [test cases](https://github.com/jinghua000/proc-to-lambda/blob/master/spec/proc_to_lambda_spec.rb).
